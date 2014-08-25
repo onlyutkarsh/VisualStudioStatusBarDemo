@@ -8,6 +8,9 @@
 #      general configuration      #
 #---------------------------------#
 
+build:
+  project: VisualStudioStatusBarDemo.sln      # path to Visual Studio solution or project
+  
 # version format
 version: 1.0.{build}
 
@@ -31,3 +34,6 @@ configuration: Release
 #  - Debug
 #  - Release
 
+# scripts to run before build
+before_build:
+  - nuget restore
